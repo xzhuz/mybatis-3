@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>org.apache.ibatis.parsing.TokenHandler</OriginalElement>
+  <nodes>
+    <node x="853.0" y="79.0">org.apache.ibatis.builder.SqlSourceBuilder.ParameterMappingTokenHandler</node>
+    <node x="645.0" y="79.0">org.apache.ibatis.parsing.PropertyParser.VariableTokenHandler</node>
+    <node x="208.00000000000006" y="79.0">org.apache.ibatis.scripting.xmltags.TextSqlNode.DynamicCheckerTokenParser</node>
+    <node x="451.00000000000006" y="79.0">org.apache.ibatis.scripting.xmltags.TextSqlNode.BindingTokenParser</node>
+    <node x="0.0" y="79.0">org.apache.ibatis.parsing.GenericTokenParserTest.VariableTokenHandler</node>
+    <node x="472.00000000000006" y="0.0">org.apache.ibatis.parsing.TokenHandler</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.apache.ibatis.scripting.xmltags.TextSqlNode.BindingTokenParser" target="org.apache.ibatis.parsing.TokenHandler">
+      <point x="0.0" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="org.apache.ibatis.scripting.xmltags.TextSqlNode.DynamicCheckerTokenParser" target="org.apache.ibatis.parsing.TokenHandler">
+      <point x="0.0" y="-14.5" />
+      <point x="319.50000000000006" y="59.0" />
+      <point x="511.6000000000001" y="59.0" />
+      <point x="-26.399999999999977" y="14.5" />
+    </edge>
+    <edge source="org.apache.ibatis.parsing.PropertyParser.VariableTokenHandler" target="org.apache.ibatis.parsing.TokenHandler">
+      <point x="0.0" y="-14.5" />
+      <point x="739.0" y="59.0" />
+      <point x="564.4000000000001" y="59.0" />
+      <point x="26.399999999999977" y="14.5" />
+    </edge>
+    <edge source="org.apache.ibatis.parsing.GenericTokenParserTest.VariableTokenHandler" target="org.apache.ibatis.parsing.TokenHandler">
+      <point x="0.0" y="-14.5" />
+      <point x="94.0" y="49.0" />
+      <point x="485.20000000000005" y="49.0" />
+      <point x="-52.80000000000001" y="14.5" />
+    </edge>
+    <edge source="org.apache.ibatis.builder.SqlSourceBuilder.ParameterMappingTokenHandler" target="org.apache.ibatis.parsing.TokenHandler">
+      <point x="0.0" y="-14.5" />
+      <point x="975.0" y="49.0" />
+      <point x="590.8" y="49.0" />
+      <point x="52.799999999999955" y="14.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="487.5" y="189.0" />
+  <SelectedNodes>
+    <node>org.apache.ibatis.builder.SqlSourceBuilder.ParameterMappingTokenHandler</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
