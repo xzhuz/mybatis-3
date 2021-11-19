@@ -1,5 +1,5 @@
 /**
- *    Copyright 2009-2019 the original author or authors.
+ *    Copyright 2009-2020 the original author or authors.
  *
  *    Licensed under the Apache License, Version 2.0 (the "License");
  *    you may not use this file except in compliance with the License.
@@ -57,7 +57,8 @@ public class XPathParser {
   /**
    * XML 实体解析器
    *
-   * entityResolver 属性，org.xml.sax.EntityResolver 对象，XML 实体解析器。
+   * <p>
+   *   entityResolver 属性，org.xml.sax.EntityResolver 对象，XML 实体解析器。
    * 默认情况下，对 XML 进行校验时，会基于 XML 文档开始位置指定的 DTD 文件或
    * XSD 文件。例如说，解析 mybatis-config.xml 配置文件时，会加载
    * http://mybatis.org/dtd/mybatis-3-config.dtd 这个 DTD 文件。但是，如果
@@ -65,6 +66,7 @@ public class XPathParser {
    * 部署在无网络的环境下，还会导致下载不下来，那么就会出现 XML 校验失败的情况。
    * 所以，在实际场景下，MyBatis 自定义了 EntityResolver 的实现，达到使用
    * 本地 DTD 文件，从而避免下载网络 DTD 文件的效果。
+   * </p>
    *
    */
   private EntityResolver entityResolver;
@@ -150,6 +152,7 @@ public class XPathParser {
    */
   public XPathParser(String xml, boolean validation, Properties variables, EntityResolver entityResolver) {
     commonConstructor(validation, variables, entityResolver);
+    // 将 XML 文件解析成 Document 对象
     this.document = createDocument(new InputSource(new StringReader(xml)));
   }
 
@@ -317,7 +320,7 @@ public class XPathParser {
           // NOP
         }
       });
-      // 3> 解析 XML 文件
+      // <3> 解析 XML 文件
       return builder.parse(inputSource);
     } catch (Exception e) {
       throw new BuilderException("Error creating document instance.  Cause: " + e, e);
@@ -326,9 +329,9 @@ public class XPathParser {
 
   /**
    * 公用的构造方法
-   * @param validation
-   * @param variables
-   * @param entityResolver
+   * @param validation 是否校验 XML
+   * @param variables 变量 Properties 对象
+   * @param entityResolver  XML 实体解析器
    */
   private void commonConstructor(boolean validation, Properties variables, EntityResolver entityResolver) {
     this.validation = validation;

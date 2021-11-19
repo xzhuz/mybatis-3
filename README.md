@@ -1,23 +1,28 @@
 MyBatis SQL Mapper Framework for Java
 =====================================
+## 项目结构
+|    模块     | 代码量 |    分层    |     定义     | 是否已读 |
+| :---------: | :----: | :--------: | :----------: | :------: |
+|   mapping   |  1724  | 核心处理层 |     映射     |          |
+|   builder   |  3207  | 核心处理层 |   配置解析   |          |
+|  scripting  |  1712  | 核心处理层 |   SQL解析    |          |
+|   plugin    |  322   | 核心处理层 |   插件模块   |          |
+|   cursor    |  266   | 核心处理层 |   游标模块   |          |
+|  executor   |  4988  | 核心处理层 |   SQL执行    |          |
+| datasource  |  1389  | 基础支持层 |  数据源模块  |          |
+| transaction |  509   | 基础支持层 |   事务模块   |          |
+|    cache    |  1387  | 基础支持层 |   缓存模块   |          |
+|   parsing   |  805   | 基础支持层 |  解析器模块  |          |
+| reflection  |  2739  | 基础支持层 |   反射模块   |          |
+|   logging   |  1548  | 基础支持层 |   日志模块   |          |
+|   binding   |  620   | 基础支持层 | Binding模块  |          |
+|     io      |  1395  | 基础支持层 | 资源加载模块 |          |
+|    type     |  3437  | 基础支持层 | 类型转化模块 |          |
+| annotations |  1015  | 基础支持层 |   注解模块   |          |
+| exceptions  |  151   | 基础支持层 |   异常模块   |          |
+|   session   |  2218  |   接口层   |   会话模块   |          |
+|    jdbc     |  1236  |    其它    |   JDBC模块   |          |
+|    lang     |   62   |    其它    |   Lang模块   |          |
 
-[![Build Status](https://travis-ci.org/mybatis/mybatis-3.svg?branch=master)](https://travis-ci.org/mybatis/mybatis-3)
-[![Coverage Status](https://coveralls.io/repos/mybatis/mybatis-3/badge.svg?branch=master&service=github)](https://coveralls.io/github/mybatis/mybatis-3?branch=master)
-[![Maven central](https://maven-badges.herokuapp.com/maven-central/org.mybatis/mybatis/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.mybatis/mybatis)
-[![Sonatype Nexus (Snapshots)](https://img.shields.io/nexus/s/https/oss.sonatype.org/org.mybatis/mybatis.svg)](https://oss.sonatype.org/content/repositories/snapshots/org/mybatis/mybatis/)
-[![License](http://img.shields.io/:license-apache-brightgreen.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
-[![Stack Overflow](http://img.shields.io/:stack%20overflow-mybatis-brightgreen.svg)](http://stackoverflow.com/questions/tagged/mybatis)
-[![Project Stats](https://www.openhub.net/p/mybatis/widgets/project_thin_badge.gif)](https://www.openhub.net/p/mybatis)
 
-![mybatis](http://mybatis.github.io/images/mybatis-logo.png)
 
-The MyBatis SQL mapper framework makes it easier to use a relational database with object-oriented applications.
-MyBatis couples objects with stored procedures or SQL statements using a XML descriptor or annotations.
-Simplicity is the biggest advantage of the MyBatis data mapper over object relational mapping tools.
-
-Essentials
-----------
-
-* [See the docs](http://mybatis.github.io/mybatis-3)
-* [Download Latest](https://github.com/mybatis/mybatis-3/releases)
-* [Download Snapshot](https://oss.sonatype.org/content/repositories/snapshots/org/mybatis/mybatis/)
