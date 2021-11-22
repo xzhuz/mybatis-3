@@ -18,6 +18,8 @@ package org.apache.ibatis.parsing;
 import java.util.Properties;
 
 /**
+ * 动态属性解析器
+ *
  * @author Clinton Begin
  * @author Kazuki Shimizu
  */
@@ -65,7 +67,7 @@ public class PropertyParser {
      */
     private final Properties variables;
     /**
-     * 是否开启默认值功能。默认为 {@link #ENABLE_DEFAULT_VALUE}
+     * 是否开启默认值功能。默认为 {@link #ENABLE_DEFAULT_VALUE} 即不开启
      */
     private final boolean enableDefaultValue;
     /**
